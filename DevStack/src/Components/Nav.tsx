@@ -15,7 +15,7 @@ export default function Nav() {
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-2">
                     
                     <button className="btn btn-white rounded-3xl">Sign In</button>
                     <button className="btn btn-error text-white rounded-3xl">Sign Up</button>

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "react",
+    "name": "React",
+    "category": "Frontend",
+    "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
+    "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Popular"
+  },
+  {
+    "id": "vue",
+    "name": "Vue.js",
+    "category": "Frontend",
+    "description": "A progressive JavaScript framework for building interactive user interfaces.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Vue.js.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Trending"
+  },
+  {
+    "id": "angular",
+    "name": "Angular",
+    "category": "Frontend",
+    "description": "A TypeScript-based framework for building scalable web applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Angular.svg",
+    "rating": 4.6,
+    "difficulty": "Advanced",
+    "badge": "Enterprise"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "category": "Backend",
+    "description": "A JavaScript runtime built on Chrome's V8 engine for server-side applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": "express",
+    "name": "Express.js",
+    "category": "Backend",
+    "description": "A minimal and flexible Node.js web application framework.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Express.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Lightweight"
+  },
+  {
+    "id": "dotnet",
+    "name": ".NET",
+    "category": "Backend",
+    "description": "A free and open-source framework for building modern web APIs and applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/.NET.svg",
+    "rating": 4.8,
+    "difficulty": "Intermediate",
+    "badge": "Enterprise"
+  },
+  {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "category": "Database",
+    "description": "A powerful, open-source object-relational database system.",
+    "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Top SQL"
+  },
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "category": "Database",
+    "description": "A NoSQL database designed for modern cloud applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner-Friendly",
+    "badge": "NoSQL"
+  },
+  {
+    "id": "mysql",
+    "name": "MySQL",
+    "category": "Database",
+    "description": "A widely used open-source relational database management system.",
+    "icon": "https://icon.icepanel.io/Technology/svg/MySQL.svg",
+    "rating": 4.7,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Classic"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "category": "Language",
+    "description": "The programming language of the web.",
+    "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "category": "Language",
+    "description": "A strongly typed superset of JavaScript.",
+    "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Recommended"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "category": "Language",
+    "description": "A versatile language used for web development, automation, and AI.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Python.svg",
+    "rating": 5.0,
+    "difficulty": "Beginner-Friendly",
+    "badge": "AI Favorite"
+  },
+  {
+    "id": "tailwind",
+    "name": "Tailwind CSS",
+    "category": "Styling",
+    "description": "A utility-first CSS framework for rapid UI development.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Trending"
+  },
+  {
+    "id": "bootstrap",
+    "name": "Bootstrap",
+    "category": "Styling",
+    "description": "A popular CSS framework for responsive web design.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Bootstrap.svg",
+    "rating": 4.7,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Classic"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "category": "DevOps",
+    "description": "A platform for developing, shipping, and running applications in containers.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Must Learn"
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes",
+    "category": "DevOps",
+    "description": "An orchestration platform for managing containerized applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Kubernetes.svg",
+    "rating": 4.8,
+    "difficulty": "Advanced",
+    "badge": "Cloud Native"
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "category": "Tools",
+    "description": "A distributed version control system for tracking code changes.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
+    "rating": 5.0,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "category": "Tools",
+    "description": "A platform for hosting and collaborating on Git repositories.",
+    "icon": "https://icon.icepanel.io/Technology/svg/GitHub.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Collaboration"
+  },
+  {
+    "id": "vscode",
+    "name": "VS Code",
+    "category": "Tools",
+    "description": "A lightweight yet powerful source code editor.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Visual-Studio-Code-(VS-Code).svg",
+    "rating": 5.0,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Developer Choice"
+  }
+]

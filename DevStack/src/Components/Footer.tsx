@@ -25,6 +25,7 @@ export default function Footer() {
                 >
                   GitHub
                 </a>
+                
                 <a
                   href="#twitter"
                   className="hover:text-[#d946ef] transition-colors"

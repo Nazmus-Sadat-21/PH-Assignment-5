@@ -2,8 +2,8 @@ import logo from "../assets/banner-stack.png";
 export default function Banner() {
   return (
     <>
-      <div className="container mx-auto px-6 py-20">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div className="container mx-auto px-3 py-15">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
           
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight">

@@ -1,9 +1,20 @@
+import { useState } from "react";
 import { type TechnologiesProps } from "../../Type";
 
 export interface TechCardProps {
   tech: TechnologiesProps;
 }
 export default function TechCard({ tech }: TechCardProps) {
+
+  var [isAdded, setIsAdded] = useState(false);
+
+  const handleAddToStack = () => {
+    setIsAdded(true);
+  }
+
+
+
+
   return (
     <div className="w-full max-w-sm bg-white border border-slate-100 rounded-[28px] p-6 shadow-sm font-sans">
       {/* Top Row: Icon & Badge */}
@@ -54,8 +65,11 @@ export default function TechCard({ tech }: TechCardProps) {
       </div>
 
       {/* Action Button */}
-      <button className="w-full bg-[#0B0F17] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-xl transition-colors duration-200">
-        Add to Stack
+      <button onClick={()=>handleAddToStack()}
+        className="w-full bg-[#0B0F17] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-xl transition-colors duration-200"
+        disabled={isAdded}
+        >
+        {isAdded === true ? "Add to Stack" : "Added to Stack"}
       </button>
     </div>
   );

@@ -1,22 +1,25 @@
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 import { type TechnologiesProps } from "../../Type";
+import { toast } from "react-toastify";
 
 export interface TechCardProps {
   tech: TechnologiesProps;
+  selectedTech : TechnologiesProps[];
+  setselectedTech : Dispatch<SetStateAction<TechnologiesProps[]>>
 }
-export default function TechCard({ tech }: TechCardProps) {
+export default function TechCard({ tech , selectedTech , setselectedTech}: TechCardProps) {
 
-  var [isAdded, setIsAdded] = useState(false);
+  const [isAdded, setIsAdded] = useState(false);
 
   const handleAddToStack = () => {
+    const newTech = [...selectedTech, tech];
+    setselectedTech(newTech);
+    toast.success(`${tech.name} Added Successfully`)
     setIsAdded(true);
-  }
-
-
-
+  };
 
   return (
-    <div className="w-full max-w-sm bg-white border border-slate-100 rounded-[28px] p-6 shadow-sm font-sans">
+    <div className="w-full max-w-sm bg-white border border-slate-100 rounded-[28px] p-6 shadow-sm font-sans transition-all hover:scale-100">
       {/* Top Row: Icon & Badge */}
       <div className="flex items-center justify-between mb-5">
         <div className="w-10 h-10 flex items-center justify-center">
@@ -65,11 +68,13 @@ export default function TechCard({ tech }: TechCardProps) {
       </div>
 
       {/* Action Button */}
-      <button onClick={()=>handleAddToStack()}
+      <button
+        onClick={handleAddToStack}
         className="w-full bg-[#0B0F17] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-xl transition-colors duration-200"
         disabled={isAdded}
-        >
-        {isAdded === true ? "Add to Stack" : "Added to Stack"}
+        
+      >
+        {isAdded === true ? "Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );

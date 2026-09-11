@@ -17,6 +17,8 @@ function App() {
 
   const [technologies] = useState(()=>tech())
 
+  const [selectedTech,setselectedTech] = useState<TechnologiesProps[]>([])
+
   return (
     <>
      <Nav></Nav>
@@ -24,11 +26,11 @@ function App() {
      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  mt-4 contain-contenter mx-auto px-4 py-4'>
       <div className='col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3'>
         <Suspense fallback={<div>Loading...</div>}>
-          <Technologies Technologies={technologies} />
+          <Technologies Technologies={technologies} selectedTech={selectedTech} setselectedTech={setselectedTech} />
         </Suspense>
       </div>
      <div className='col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1'>
-      <Stack></Stack>
+      <Stack selectedTech={selectedTech} setselectedTech={setselectedTech}></Stack>
      </div>
      </div>
      <Footer></Footer>

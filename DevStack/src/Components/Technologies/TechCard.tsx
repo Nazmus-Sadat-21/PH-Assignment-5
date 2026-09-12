@@ -4,23 +4,29 @@ import { toast } from "react-toastify";
 
 export interface TechCardProps {
   tech: TechnologiesProps;
-  selectedTech : TechnologiesProps[];
-  setselectedTech : Dispatch<SetStateAction<TechnologiesProps[]>>
+  selectedTech: TechnologiesProps[];
+  setselectedTech: Dispatch<SetStateAction<TechnologiesProps[]>>;
 }
-export default function TechCard({ tech , selectedTech , setselectedTech}: TechCardProps) {
-
+export default function TechCard({
+  tech,
+  selectedTech,
+  setselectedTech,
+}: TechCardProps) {
   const [isAdded, setIsAdded] = useState(false);
 
   const handleAddToStack = () => {
     const newTech = [...selectedTech, tech];
     setselectedTech(newTech);
-    toast.success(`${tech.name} Added Successfully`)
+    toast.success(`${tech.name} Added Successfully`);
     setIsAdded(true);
   };
 
   return (
-    <div className="w-full max-w-sm bg-white border border-slate-100 rounded-[28px] p-6 shadow-sm font-sans transition-all hover:scale-100">
-      {/* Top Row: Icon & Badge */}
+    <div
+      className={`w-full max-w-sm bg-white border rounded-[28px] p-6 shadow-sm font-sans transition-all hover:scale-100 ${
+        isAdded ? "border-secondary" : "border-slate-100"
+      }`}
+    >
       <div className="flex items-center justify-between mb-5">
         <div className="w-10 h-10 flex items-center justify-center">
           <img
@@ -31,13 +37,12 @@ export default function TechCard({ tech , selectedTech , setselectedTech}: TechC
         </div>
 
         {tech.badge && (
-          <span className="bg-[#E0F2FE]/60 text-[#38BDF8] text-xs font-semibold px-3 py-1 rounded-full">
+          <span className="bg-soft text-secondary text-xs font-semibold px-3 py-1 rounded-full">
             {tech.badge}
           </span>
         )}
       </div>
 
-      {/* Content: Title & Description */}
       <div className="mb-6 space-y-2">
         <h3 className="text-2xl font-bold text-[#0F172A]">{tech.name}</h3>
         <p className="text-sm text-slate-400 leading-relaxed font-normal">
@@ -45,7 +50,6 @@ export default function TechCard({ tech , selectedTech , setselectedTech}: TechC
         </p>
       </div>
 
-      {/* Meta Row: Tag, Skill Level & Rating */}
       <div className="flex items-center justify-between mb-6 text-xs">
         <span className="bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-md">
           {tech.category}
@@ -67,14 +71,15 @@ export default function TechCard({ tech , selectedTech , setselectedTech}: TechC
         </div>
       </div>
 
-      {/* Action Button */}
       <button
         onClick={handleAddToStack}
-        className="w-full bg-[#0B0F17] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-xl transition-colors duration-200"
-        disabled={isAdded}
-        
+        className={
+          isAdded
+            ? " w-full rounded-xl btn btn-soft btn-secondary pointer-events-none"
+            : "w-full bg-[#0B0F17] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-xl transition-colors duration-200"
+        }
       >
-        {isAdded === true ? "Added to Stack" : "Add to Stack"}
+        {isAdded === true ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );

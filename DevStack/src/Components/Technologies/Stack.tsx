@@ -10,7 +10,9 @@ export default function Stack({ selectedTech, setselectedTech }: TechCardProps) 
   const hasSelectedTech = selectedTech.length > 0;
 
   const removeTech = (techName: string) => {
-    setselectedTech((current) => current.filter((tech) => tech.name !== techName));
+
+    var current = selectedTech.filter((tech) => tech.name !== techName)
+    setselectedTech(current);
     toast.success(`${techName} is removed`)
   };
 
@@ -20,7 +22,7 @@ export default function Stack({ selectedTech, setselectedTech }: TechCardProps) 
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="w-full flex justify-center items-center py-3">
       <div className="w-full max-w-[340px] bg-white rounded-[28px] p-6 shadow-sm border border-slate-100">
         <div>
           <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
@@ -40,7 +42,10 @@ export default function Stack({ selectedTech, setselectedTech }: TechCardProps) 
               >
                 <div className="flex justify-center items-center">
                   <img src={tech.icon} alt="" height={30} width={30}  />
-                  <span className="text-sm font-medium text-slate-700 ml-2">{tech.name}</span>
+                  <div>
+                    <span className="text-sm font-medium text-slate-700 ml-2">{tech.name}</span>
+                    <p className="text-[10px] ml-2">{tech.category}</p>
+                  </div>
                 </div>
                 <button
                   type="button"

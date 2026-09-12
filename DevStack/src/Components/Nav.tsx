@@ -8,7 +8,7 @@ export default function Nav() {
                 <img src={logo} alt="Dev Stack png" />
                 <div>
                     <ul className="flex gap-6">
-                        <li><a href="#">Home</a></li>
+                        <li className="text-secondary"><a href="#">Home</a></li>
                         <li><a href="#">Technologies</a></li>
                         <li><a href="#">Projects</a></li>
                         <li><a href="#">About</a></li>

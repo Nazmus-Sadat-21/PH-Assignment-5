@@ -1,4 +1,4 @@
-import { use, useState, type Dispatch, type SetStateAction } from "react";
+import { use,  type Dispatch, type SetStateAction } from "react";
 import { type TechnologiesProps } from "../../Type";
 import TechCard from "./TechCard";
 
@@ -12,6 +12,7 @@ export default function Technologies({
   Technologies,
   selectedTech,
   setselectedTech,
+  
 }: TechnologiesPageProps) {
   const Data = use(Technologies);
 
@@ -26,6 +27,7 @@ export default function Technologies({
               tech={tech}
               selectedTech={selectedTech}
               setselectedTech={setselectedTech}
+            
             />
           ))}
         </div>

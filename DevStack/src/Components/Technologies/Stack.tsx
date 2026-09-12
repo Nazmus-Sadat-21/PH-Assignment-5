@@ -1,10 +1,11 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import { type TechnologiesProps } from "../../Type";
 import { toast } from "react-toastify";
 
 export interface TechCardProps {
   selectedTech : TechnologiesProps[];
-  setselectedTech : Dispatch<SetStateAction<TechnologiesProps[]>>
+  setselectedTech : Dispatch<SetStateAction<TechnologiesProps[]>>;
+  
 }
 export default function Stack({ selectedTech, setselectedTech }: TechCardProps) {
   const hasSelectedTech = selectedTech.length > 0;
@@ -23,7 +24,7 @@ export default function Stack({ selectedTech, setselectedTech }: TechCardProps) 
 
   return (
     <div className="w-full flex justify-center items-center py-3">
-      <div className="w-full max-w-[340px] bg-white rounded-[28px] p-6 shadow-sm border border-slate-100">
+      <div className="w-full max-w-\[340px]\ bg-white rounded-[28px] p-6 shadow-sm border border-slate-100">
         <div>
           <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
             Your Stack

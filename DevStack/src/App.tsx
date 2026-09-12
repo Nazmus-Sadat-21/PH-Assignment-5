@@ -13,7 +13,7 @@ function App() {
     var data = await response.json();
     return data;
   };
-
+  
   const [technologies] = useState(() => tech());
 
   const [selectedTech, setselectedTech] = useState<TechnologiesProps[]>([]);
@@ -37,6 +37,7 @@ function App() {
               Technologies={technologies}
               selectedTech={selectedTech}
               setselectedTech={setselectedTech}
+              
             />
           </Suspense>
         </div>
@@ -44,6 +45,7 @@ function App() {
           <Stack
             selectedTech={selectedTech}
             setselectedTech={setselectedTech}
+           
           ></Stack>
         </div>
       </div>

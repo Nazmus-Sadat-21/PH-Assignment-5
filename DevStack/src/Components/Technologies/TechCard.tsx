@@ -22,8 +22,10 @@ export default function TechCard({
   );
 
   const handleAddToStack = () => {
-     if(isAdded)
+    if(isAdded){
+      toast.warning(`${tech.name} already added`)
       return
+    }
     const newTech = [...selectedTech, tech];
     setselectedTech(newTech);
     toast.success(`${tech.name} Added Successfully`);

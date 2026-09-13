@@ -193,7 +193,6 @@ This project demonstrates several important React concepts:
 * 📦 Props
 * 🔄 State
 * 🪝 `useState`
-* 🪝 `useEffect`
 * 🔀 Conditional Rendering
 * 📋 `.map()`
 * 🔑 Unique `key`
